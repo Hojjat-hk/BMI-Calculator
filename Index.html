@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+    <title>Real World</title>
+</head>
+<body>
+    <section class="bmi_section">
+        <div class="row">
+            <input type="range" value="20" min="20" max="200" id="weightInput" required class="input-range">
+            <span class="resultValue"><span class="weightValue x1">20</span>KG</span>
+        </div>
+        <div class="row">
+            <input type="range" value="80" min="80" max="290" id="heightInput" required class="input-range">
+            <span class="resultValue"><span class="heightValue x1">80</span>Cm</span>
+        </div>
+        <div class="bmi-result_container">
+            <span id="resultBmiNumber">31.25</span>
+            <span id="resultBmiText">Obese</span>
+        </div>
+    </section>
+    <script type="application/javascript" src="Scripts/Script.js" defer></script>
+</body>
+</html>
