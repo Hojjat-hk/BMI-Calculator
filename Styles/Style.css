@@ -1,0 +1,89 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Poppins, serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #f2d2fe 70%, #FFF6FC);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bmi_section{
+    width: 100%;
+    max-width: 600px;
+    padding:30px 40px;
+    background-color: #f2d2fe;
+    box-shadow:  4px 4px 20px #c4aace,
+    -5px -5px 20px #fffaff;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 10px;
+    gap: 40px;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.row > .input-range{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: 3px;
+    outline: none;
+    background-color: rgba(32, 32, 32, 0.7);
+    border-radius: 20px;
+}
+.row > .input-range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: #FFE5EC;
+    border: 5px solid mediumpurple;
+    border-radius: 100%;
+    cursor:pointer;
+}
+.resultValue{
+    text-align: center;
+    flex: 1;
+    color: #1e1e1e;
+    font-weight: bolder;
+}
+.x1{
+    color: #6f6f6f !important;
+    margin-right: 3px;
+}
+.bmi-result_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    align-items: center;
+    padding-block: 10px;
+}
+#resultBmiNumber{
+    font-weight: bold;
+    font-size: 32px;
+    transition: all 0.3s ease;
+    color: #C20600;
+}
+#resultBmiText{
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-shadow: 1px 2px 5px rgba(32, 32, 32, 0.2);
+    display: block;
+    height: 30px;
+}
