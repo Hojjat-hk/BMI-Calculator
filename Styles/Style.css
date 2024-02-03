@@ -13,6 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-inline: 15px;
 }
 .bmi_section{
     width: 100%;
@@ -33,6 +34,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    padding: 0 5px;
 }
 .row > .input-range{
     -webkit-appearance: none;
@@ -42,6 +44,7 @@ body{
     outline: none;
     background-color: rgba(32, 32, 32, 0.7);
     border-radius: 20px;
+    min-width: 80%;
 }
 .row > .input-range::-webkit-slider-thumb{
     -webkit-appearance: none;
@@ -86,4 +89,15 @@ body{
     text-shadow: 1px 2px 5px rgba(32, 32, 32, 0.2);
     display: block;
     height: 30px;
+}
+@media only screen and (max-width: 450px){
+    .row{
+        gap : 20px;
+    }
+    .row > .input-range{
+        width: 60%;
+    }
+    .row > .input-range::-webkit-slider-thumb{
+        cursor: none;
+    }
 }
