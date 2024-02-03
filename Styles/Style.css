@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *, *::before, *::after{
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Poppins, serif;
+    font-family: "Poppins", serif;
     padding: 0;
     margin: 0;
 }
@@ -27,6 +28,11 @@ body{
     align-items: center;
     border-radius: 10px;
     gap: 40px;
+}
+.bmi_section > .header{
+    font-weight: bolder;
+    word-spacing: 5px;
+    letter-spacing: 1px;
 }
 .row{
     width: 100%;
