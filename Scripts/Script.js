@@ -10,13 +10,20 @@ let resultBMINum = $.querySelector("#resultBmiNumber");
 let resultBMItext = $.querySelector("#resultBmiText");
 
 // [+] Functions
+function bmiGenerator(){
+    weightValue.innerHTML = weightInput.value;
+    heightValue.innerHTML = heightInput.value;
+}
 function bmiCalculator(){
     let weight = weightInput.value;
     let height = heightInput.value;
+    
     let bmiResult = weight / (Math.pow(height / 100, 2))
+    
     weightValue.innerHTML = weight;
     heightValue.innerHTML = height;
     resultBMINum.innerHTML = bmiResult.toFixed(2);
+    
     if(bmiResult >= 0 && bmiResult <= 18.5){
         resultBMItext.innerHTML = 'underweight';
         resultBMINum.style.color = "#FFBC00";
@@ -31,6 +38,26 @@ function bmiCalculator(){
         resultBMINum.style.color = "#C20600";
     }
 }
+function advanceWriting(text = "", bmiColor = "") {
+    resultBMItext.innerHTML = null;
+    resultBMINum.style.color = bmiColor;
+
+    let index = 0 ;
+    if(text){
+        let writingInterval = setInterval(() => {
+            if (index < text.length) {
+                resultBMItext.innerHTML += text[index];
+                index++;
+            }
+            else {
+                clearInterval(writingInterval);
+            }
+        }, 60);
+    }
+
+}
 // [+] Events
-weightInput.addEventListener("input", bmiCalculator)
-heightInput.addEventListener("input", bmiCalculator)
+weightInput.addEventListener("input", bmiGenerator);
+heightInput.addEventListener("input", bmiGenerator);
+weightInput.addEventListener("change", bmiCalculator);
+heightInput.addEventListener("change", bmiCalculator);
